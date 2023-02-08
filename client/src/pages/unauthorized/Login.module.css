@@ -1,0 +1,160 @@
+.page {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: min(calc(100vw - 40px), 400px);
+    padding: 0 20px;
+}
+
+.headerEntire {
+    border-bottom: 5px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 30px;
+    font-weight: "600";
+}
+
+.headerHeading {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.line {
+    height: 5px;
+    width: 50%;
+    background-color: #03ACF3;
+    border-radius: 20px 0 0 20px;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.inputs > div > label {
+    margin-left: 20px;
+}
+
+.inputs > div > input {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #fefefe;
+    font-size: 15px;
+    padding: 0 20px
+}
+
+.ctaBtn {
+    margin-top: 40px;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #03ACF3;
+    color: #fff;
+    font-size: 15px;
+    font-weight: "medium";
+}
+
+
+.actions {
+    color: #03ACF3;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.left,
+.right,
+.dot {
+    list-style: none;
+}
+
+.dot {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dot > div {
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: #03ACF3;
+}
+
+.alternativeSignin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.alternativeSignin > li {
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #03ACF3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.check {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.checkHead {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.checkData {
+    font-size: 15px
+}
+
+
+
+
+
+

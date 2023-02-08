@@ -1,0 +1,26 @@
+.card {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #03ACF3;
+}
+
+.left {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.right > img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
