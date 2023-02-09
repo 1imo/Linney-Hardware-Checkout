@@ -4,9 +4,11 @@ const firebase = require("firebase/compat/app");
 require("firebase/compat/firestore");
 
 const { getDatabase, ref, get, set, child, remove, onValue, onChildChanged } = require("firebase/database")
-const  { getFirestore, query, getDocs, collection, where, addDoc, doc, setDoc, updateDoc} = require("firebase/firestore");
+const  { getFirestore, query, getDocs, collection, where, addDoc, doc, setDoc, updateDoc, getDoc} = require("firebase/firestore");
 const multer  = require('multer')
 const cors = require('cors');
+const client = require('firebase-tools');
+const { resolve } = require('styled-jsx/css');
 // const querybase = require('querybase')
 
 
@@ -45,30 +47,125 @@ const chars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
 app.post("/createOrganisation", upload.none(), (req, res) => {
 
   let code = []
-  
-  function genCode() {
-    for (let i = 0; i < 6; i++) {
-      code.push(chars[Math.round(Math.random() * (chars.length - 1))])
-    }
 
-    db.collection('organisations').where('code', "==", code.join("")).get().then(querySnapshot => {
-      let data = querySnapshot.docs.map(doc => doc.data())
+ 
+ 
+    function generateCode() {
+      for (let i = 0; i < 6; i++) {
+        code.push(chars[Math.round(Math.random() * (chars.length - 1))])
+        // console.log("GEN")
+        if (i === 5) {
+          db.collection('organisations').where('code', "==", code.join("")).get().then(querySnapshot => {
+            let data = querySnapshot.docs.map(doc => doc.data())
+      
+            if (data.length >= 1) {
+              code = []
+              generateCode()
+            } else {
+              console.log(code.join("") + "PUSHED CODE")
+              console.log()
+              const addOrg = new Promise((resolve, reject) => {
+                console.log(code.join("") + "ADDED CODE")
+                console.log()
+                db.collection("organisations").add({
+                  code: code.join(''),
+                  name: req.body.name,
+                })
+                resolve(true)
+              })
+              addOrg.then(async () => await getUserData()).then(() => addAdmin()).then(res.sendStatus(200)).catch(err => console.log(err))
 
-      if (data.length >= 1) {
-        code = []
-        genCode()
+            }
+          })
+        }
       }
+  
+      
+  }
+    generateCode()
+    
+  
+  
+  
+  
+  
+    
+  
+    let userData = []
+
+  
+  const getUserData = async () => {
+    console.log("HERE")
+    console.log(code)
+    await db.collection("users").where("uid", "==", req.body.uid).get().then(querySnapshot => {
+    
+      querySnapshot.docs.map(foc => {
+        userData.push(foc.data())
+        // userData = foc.data();
+        console.log(userData)
+        console.log(foc.id)
+        let tempRef = doc(db, "users/" + foc.id)
+        updateDoc(tempRef, { admin: true, company: req.body.name })
+        console.log("1")
+        // resolve(foc.data())
+        console.log(2)
+        return foc.data()
+            
+      })
     })
   }
-  genCode()
 
-  db.collection("organisations").add({
-    code: code.join(''),
-    name: req.body.name,
+  const addAdmin =  () => {
+    console.log("RAN")
+    console.log(userData[0])
+    console.log(code.join(""))
+      db.collection("organisations").where("code", "==", code.join('')).get().then(querySnapshot => {
+        // console.log(querySnapshot.docs)
+        console.log(querySnapshot.docs.length)
+        querySnapshot.docs.map(loc => {
+          console.log(loc.data())
+          console.log(loc.id + " DATA")
+          console.log(userData)
+          
+          addDoc(collection(db, "organisations/" + loc.id + "/admin/"), {
+            user: {...userData[0]}
+          })
+
+          return true
+          
+        })
+            
+          
+      })
+  }
+
+      // res.sendStatus(200)
+      
+  
+
+
+  
+      
   })
+  
 
-  res.sendStatus(200)
-})
+  
+  
+ 
+    
+
+
+   
+    
+  
+
+  
+  
+
+  
+
+  
+
 
 app.post("/codeCheck", upload.none(), (req, res) => {
 

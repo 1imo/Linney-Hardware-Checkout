@@ -103,7 +103,12 @@ const verify = [
     }
 
     const create = async () => {
-        console.log("CREATE")
+        const res = await axios.post(`${DevCtx.ip}/createOrganisation`, {
+            name: orgName.current.value,
+            uid: UserCtx.user.uid
+        })
+
+        console.log(res.data)
     }
 
     return <div className={classes.page}>

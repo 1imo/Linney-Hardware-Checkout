@@ -6,7 +6,7 @@ const DevContext = createContext({})
 export function DevContextHandler(props) {
 
     const Context = {
-        ip: "http://172.20.10.4:8080"
+        ip: "http://192.168.0.40:8080"
     }
 
     return <DevContext.Provider value={Context}>
