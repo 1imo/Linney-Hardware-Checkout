@@ -108,7 +108,9 @@ const verify = [
             uid: UserCtx.user.uid
         })
 
-        console.log(res.data)
+        if (res) {
+            navigate("/dashboard")
+        }
     }
 
     return <div className={classes.page}>

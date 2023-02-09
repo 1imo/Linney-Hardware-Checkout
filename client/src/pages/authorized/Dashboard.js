@@ -19,6 +19,8 @@ function Dashboard() {
     useEffect(() => {
         if (!UserCtx.user) {
             navigate("/login")
+        } else {
+            console.log(UserCtx.userDetails)
         }
     }, [])
 

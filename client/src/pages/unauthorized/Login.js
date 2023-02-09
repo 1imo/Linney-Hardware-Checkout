@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import UserContext from "../../str/UserContext";
 import classes from "./Login.module.css";
@@ -11,6 +11,7 @@ function Login() {
     const password = useRef();
     const confirmPassword = useRef();
     const name = useRef();
+    const location = useLocation();
 
     const UserCtx = useContext(UserContext);
     const navigate = useNavigate();
@@ -34,8 +35,12 @@ function Login() {
 
     useEffect(() => {
         if (UserCtx.user) {
-            console.log(UserCtx.user)
-            navigate("/dashboard")
+            if (location.state.referredFrom) {
+                navigate(location.state.referredFrom)
+            } else {
+                navigate("/dashboard")
+
+            }
         }
     }, [UserCtx.user])
 

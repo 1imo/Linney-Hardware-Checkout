@@ -1,29 +1,29 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import UserContext from '../str/UserContext';
 import classes from './Header.module.css';
 
 function Header() {
     const navigate = useNavigate();
     const UserCtx = useContext(UserContext);
+    const location = useLocation();
 
     const [page, setPage] = useState(1);
     // let page = 1
-    const pages = ["/dashboard", "/browse", "/search", "/support", "/about"];
+    const pages = ["/dashboard", "/org", "/browse", "/support", "/about"];
+    console.log(location)
 
-    useEffect(() => {
-        navigate(pages[page - 1]);
-
-    }, [page]);
+    
 
     const changePage = (switchPage) => {
-        console.log(switchPage)
+        console.log(switchPage + "sp")
         setPage(switchPage)
-        // // page = switchPage
-        navigate(pages[page - 1])
+        console.log(page + "PN")
+        // page = switchPage
+        navigate(pages[switchPage - 1])
     }
-    console.log(UserCtx.user.uid)
+    // console.log(UserCtx.user.uid)
 
     let open = 0
 
@@ -58,20 +58,28 @@ function Header() {
         }
     })
 
+    let menuEngaged = false;
+
+    const showMenu = () => {
+        if (!menuEngaged) {
+
+        }
+    }
+
 
     return <div className={classes.header}>
         <div className={classes.left}>
             <div onClick={() => changePage(1)}>
                 <img src={"home.svg"} alt="home" />
-                {page == 1 ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Home</div><div className={classes.lineTwo}>&nbsp;</div></div>}
+                {location.pathname == "/dashboard" ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Home</div><div className={classes.lineTwo}>&nbsp;</div></div>}
             </div>
             <div onClick={() => changePage(2)}>
-                <img src={"library.svg"} alt="browse" />
-                {page == 2 ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Browse</div><div className={classes.lineTwo}>&nbsp;</div></div>}
+                <img src={"building.svg"} alt="organisation" />
+                {location.pathname == "/org" ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Org</div><div className={classes.lineTwo}>&nbsp;</div></div>}
             </div>
             <div onClick={() => changePage(3)}>
-                <img src={"search.svg"} alt="search" />
-                {page == 3 ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Search</div><div className={classes.lineTwo}>&nbsp;</div></div>}
+                <img src={"library.svg"} alt="browse" />
+                {page == 3 ? <div className={classes.line}>&nbsp;</div> : <div><div className={classes.firstText}>Browse</div><div className={classes.lineTwo}>&nbsp;</div></div>}
             </div>
             <div onClick={() => changePage(4)}>
                 <img src={"message-square.svg"} alt="support" />
@@ -89,10 +97,10 @@ function Header() {
                         {UserCtx.user.displayName}
                     </div>
                     <div className={classes.rightLeftCompanyName}>
-                        {UserCtx.userDetails.company ? UserCtx.userDetails.company : null}
+                        {UserCtx.userDetails ? UserCtx.userDetails.company : null}
                     </div>
                 </div>
-                <div className={classes.profilePhoto}>
+                <div className={classes.profilePhoto} onClick={() => showMenu}>
                     <img className="joke" src={`https://api.dicebear.com/5.x/identicon/svg?seed=${UserCtx.user.uid}`} alt="Profile" />
                     <img className="secret" src={"https://cdn2.f-cdn.com/contestentries/1380951/30276984/5b5c865553c89_thumb900.jpg"} style={{zIndex: -10}} />
                 </div>

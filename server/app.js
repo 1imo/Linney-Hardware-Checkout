@@ -241,6 +241,12 @@ app.get("/reach/:id", (req, res) => {
 
 })
 
+app.post("/getOrgData", upload.none(), (req, res) => {
+
+  console.log(req.body.company)
+  res.sendStatus(200)
+})
+
 
 
 app.listen(8080)

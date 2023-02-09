@@ -45,7 +45,7 @@ function DataCrd(props) {
                     {state}
                     <div style={{marginLeft: 20, marginRight: 20}}>{item.quantity}</div>
                     <img src={"message-square.svg"} />
-                    <img src={"qr-code.png"} />
+                    <img src={"qr-code.svg"} />
                     <img src={"more-vertical.png"} />
                 </div>
             </div>  

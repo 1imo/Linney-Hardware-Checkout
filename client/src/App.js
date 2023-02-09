@@ -9,6 +9,7 @@ import Dashboard from './pages/authorized/Dashboard';
 import UserContext from './str/UserContext';
 import Catch from './pages/authorized/Catch';
 import Details from './pages/authorized/Details';
+import Org from './pages/authorized/Org';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/details" element={<Details />} />
         <Route path="/" element={<Catch />} />
+        <Route path="/org" element={<Org />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
