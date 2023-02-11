@@ -97,7 +97,7 @@ function Header() {
                         {UserCtx.user.displayName}
                     </div>
                     <div className={classes.rightLeftCompanyName}>
-                        {UserCtx.userDetails ? UserCtx.userDetails.company : null}
+                        {UserCtx.userDetails ? UserCtx.userDetails.company : UserCtx.userOrg ? UserCtx.userOrg : null}
                     </div>
                 </div>
                 <div className={classes.profilePhoto} onClick={() => showMenu}>

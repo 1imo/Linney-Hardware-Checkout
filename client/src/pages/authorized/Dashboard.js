@@ -9,20 +9,33 @@ import MainInfoCrd from '../../components/MainInfoCrd';
 import GraphCrd from '../../components/GraphCrd';
 import PickUpCrd from '../../components/PickUpCrd';
 import DataCrd from '../../components/DataCrd';
+import axios from 'axios';
+import DevContext from '../../str/DevContext';
 
 
 function Dashboard() {
     const navigate = useNavigate();
 
     const UserCtx = useContext(UserContext);
+    const DevCtx = useContext(DevContext);
 
     useEffect(() => {
         if (!UserCtx.user) {
             navigate("/login")
         } else {
             console.log(UserCtx.userDetails)
+            
+            getIp()
         }
     }, [])
+
+    const getIp = async () => {
+        const res = await axios.get("https://api.ipify.org/?format=json")
+        axios.post(`${DevCtx.ip}/ip`, {
+            ip: res.data,
+            uid: UserCtx.user.uid
+        })
+    }
 
     
     return <div className={classesGlob.page}>

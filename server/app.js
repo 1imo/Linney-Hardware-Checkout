@@ -62,11 +62,9 @@ app.post("/createOrganisation", upload.none(), (req, res) => {
               code = []
               generateCode()
             } else {
-              console.log(code.join("") + "PUSHED CODE")
-              console.log()
+            
               const addOrg = new Promise((resolve, reject) => {
-                console.log(code.join("") + "ADDED CODE")
-                console.log()
+                
                 db.collection("organisations").add({
                   code: code.join(''),
                   name: req.body.name,
@@ -95,20 +93,16 @@ app.post("/createOrganisation", upload.none(), (req, res) => {
 
   
   const getUserData = async () => {
-    console.log("HERE")
-    console.log(code)
+    
     await db.collection("users").where("uid", "==", req.body.uid).get().then(querySnapshot => {
     
       querySnapshot.docs.map(foc => {
         userData.push(foc.data())
         // userData = foc.data();
-        console.log(userData)
-        console.log(foc.id)
+       
         let tempRef = doc(db, "users/" + foc.id)
-        updateDoc(tempRef, { admin: true, company: req.body.name })
-        console.log("1")
-        // resolve(foc.data())
-        console.log(2)
+        updateDoc(tempRef, { admin: true, company: req.body.name, code: code.join('') })
+        
         return foc.data()
             
       })
@@ -116,16 +110,11 @@ app.post("/createOrganisation", upload.none(), (req, res) => {
   }
 
   const addAdmin =  () => {
-    console.log("RAN")
-    console.log(userData[0])
-    console.log(code.join(""))
+  
       db.collection("organisations").where("code", "==", code.join('')).get().then(querySnapshot => {
-        // console.log(querySnapshot.docs)
-        console.log(querySnapshot.docs.length)
+       
         querySnapshot.docs.map(loc => {
-          console.log(loc.data())
-          console.log(loc.id + " DATA")
-          console.log(userData)
+          
           
           addDoc(collection(db, "organisations/" + loc.id + "/admin/"), {
             user: {...userData[0]}
@@ -175,7 +164,6 @@ app.post("/codeCheck", upload.none(), (req, res) => {
     let data = []
     querySnapshot.docs.map(doc => {
       data.push(doc.data())
-      console.log(doc.id)
     })
     if (data.length == 1) {
       res.send(data[0].name)
@@ -192,7 +180,6 @@ app.post("/addToGroup", upload.none(), async (req, res) => {
     let id = ""
     querySnapshot.docs.map(doc => {
       data.push(doc.data())
-      console.log(doc.id)
       id = doc.id
     })
     db.collection("users").where("uid", "==", req.body.uid).get().then(querySnapshot => {
@@ -202,18 +189,16 @@ app.post("/addToGroup", upload.none(), async (req, res) => {
         userData.push(doc.data())
         userId = doc.id
       })
-      // console.log(userData)
+      
       addDoc(collection(db, "organisations/" + id + "/users"), {
         uid: userData[0].uid,
         usersName: userData[0].name,
         email: userData[0].email,
       });
-      // setDoc(collection(db, "users/" + userId + "/") , {
-      //   company: data[0].name
-      // }, {merge: true})
+      
 
       let tempref = doc(db, "users/" + userId)
-      updateDoc(tempref, { company: data[0].name }).then(() => {
+      updateDoc(tempref, { company: data[0].name, code: req.body.code }).then(() => {
         res.sendStatus(200)
       })
       
@@ -241,9 +226,63 @@ app.get("/reach/:id", (req, res) => {
 
 })
 
-app.post("/getOrgData", upload.none(), (req, res) => {
+app.post("/getOrgData", upload.none(), async (req, res) => {
+  
 
-  console.log(req.body.company)
+  console.log(req.body)
+  let data = []
+  let id = ""
+  let admins = []
+  let users = []
+
+  await db.collection("organisations").where("code", "==", req.body.code).get().then(querySnapshot => {
+
+    querySnapshot.docs.map(docu => {
+      data.push(docu.data())
+      id = docu.id
+    })
+    return id
+    }).then(async (id) => {
+      await db.collection("organisations/" + id + "/admin").get().then(querySnapshot => {
+      querySnapshot.docs.map(docu => {
+        
+        // console.log(docu.data())
+        admins.push(docu.data())
+      })
+      
+        return id
+        
+    })
+    }).then(async(id) => {
+      await db.collection("organisations/" + id + "/users").get().then(querySnapshot => {
+      querySnapshot.docs.map(docu => {
+        
+        // console.log(docu.data())
+        users.push(docu.data())
+      })
+    })
+
+    
+
+    
+
+    // console.log(data)
+    // console.log(admins)
+    // console.log(users)
+    })
+  
+  if (admins.length > 0) {
+    res.send({admins: admins, users: users})
+  } else {
+    res.send(false)
+  }
+
+  
+  // res.sendStatus(200)
+})
+
+app.post("/ip", upload.none(), (req, res) => {
+  console.log(req.body)
   res.sendStatus(200)
 })
 

@@ -35,7 +35,7 @@ function Login() {
 
     useEffect(() => {
         if (UserCtx.user) {
-            if (location.state.referredFrom) {
+            if (location.state) {
                 navigate(location.state.referredFrom)
             } else {
                 navigate("/dashboard")
