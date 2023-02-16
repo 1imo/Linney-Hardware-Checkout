@@ -1,0 +1,142 @@
+.hero {
+    position: absolute;
+    height: 100%;
+    width: calc(100vw/12*7);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(270deg, rgba(43, 42, 47, 0.2) 0%, rgba(43, 42, 47, 0) 100%), linear-gradient(145.96deg, #FFFFFF 0%, #ABA9B2 100%); */
+    z-index: -2;
+}
+
+.page {
+    overflow: hidden;
+}
+.heroMob {
+    background: none;
+    z-index: 0;
+    position: static;
+    margin-top: 310px;
+    width: 100%;
+    height: 100%;
+}
+
+.heroMob {
+    transform: translateX(50%);
+  
+}
+
+.cardBar {
+    /* position: absolute; */
+    transform: translateY(-20%);;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px max(20px, calc(100vw/24));
+    color: #2B2A2F;
+    font-size: 15px;
+    
+}
+
+
+
+.nav > div {
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+    font-weight: 500;
+    
+
+}
+
+.navActions {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.details {
+    position: absolute;
+    top: 50%;
+    left: max(20px, calc(100vw/24));
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.detailsMob {
+    top: 0%;
+    transform: translateY(0%);
+    /* position: static; */
+    row-gap: 20px;
+
+    margin-top: 195px;
+}
+
+.details > h1,
+.details > p {
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+}
+
+.details > h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.details > p {
+    width: max(calc(100vw / 12 * 4), 400px);
+    line-height: 120%;
+    font-size: 15px;
+
+}
+
+.detailsMob > h1 {
+    font-size: 30px;
+}
+
+.detailsMob > p {
+    width: calc(100vw - 40px)
+}
+
+.detailsActions {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailsActions > button {
+    outline: none;
+    border: none;
+    background-color: #fff;
+  color: #6BBF59;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer
+}
+
+.getStarted {
+    background-color: #6BBF59 !important;
+    color: #fff !important;
+}
+
+
+
+
+

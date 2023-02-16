@@ -1,0 +1,50 @@
+.crd {
+    background: linear-gradient(107.65deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 50.8%, rgba(255, 255, 255, 0.6) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+
+    padding: 20px;
+    font-size: 10px;
+    line-height: 120%;
+    color: #2B2A2F;
+    box-sizing: border-box;
+    
+
+}
+
+.crdSquare {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.squareTop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.squareTop > div {
+    width: calc(100% / 12 * 7);
+    text-align: right;
+}
+
+.squareBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomFocus {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.bottomSupport {
+    font-size: 20px;
+}
