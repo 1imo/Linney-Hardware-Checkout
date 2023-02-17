@@ -19,7 +19,7 @@ export default function Register() {
                 email: email.current.value,
                 password: pass.current.value,
                 redirect: true,
-                callbackUrl: "/"
+                callbackUrl: "/dashboard"
             })
         }
 

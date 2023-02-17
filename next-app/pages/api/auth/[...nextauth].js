@@ -3,12 +3,13 @@ import GithubProvider from "next-auth/providers/github"
 import CredentialsProvider from "next-auth/providers/credentials";
 import db from "../../../utils/db/index.js"
 // import { getSession } from 'next-auth/client'
-import simplecrypt from "simplecrypt";
+// import simplecrypt from "simplecrypt";
+import bcrypt from "bcryptjs";
 
 // import { addDoc } from "firebase-admin" 
 
 
-const sc = simplecrypt();
+
 
 export const authOptions = {
   // Configure one or more authentication providers
@@ -48,28 +49,54 @@ secret: "temp-secret",
             //     })
             //     console.log(docs)
             // })
-
-            db.collection('users').get().then(querySnapshot => {
-                console.log("SOMETHING")
-                let arr = []
-                querySnapshot.docs.map(doc => arr.push(doc.data()))
-                console.log(arr)
+            
+            let data = new Promise((resolve, reject) => {
+                db.collection('users').where("email", "==", email).get().then(querySnapshot => {
+                    console.log("SOMETHING")
+                    let arr = []
+                    querySnapshot.docs.map(doc => arr.push(doc.data()))
+                    console.log(arr)
+                    // console.log(sc.decrypt(arr[0].password))
+                    
+                    if (arr[0].email == email) {
+                        bcrypt.compare(password, arr[0].password, (err, match) => {
+                            
+    
+                           if (match) {
+                                console.log("CORRECT")
+    
+                                resolve(arr[0])
+                           } else {
+                               if (err) {
+                                console.log(err)
+                               
+                            }
+                                console.log("INCORRECT")
+    
+                                resolve(null)
+                            }
+                        })
+                    }
+                })
             })
 
-            const obfusc = sc.encrypt(password)
-            console.log(obfusc)
-            const orig = sc.decrypt(obfusc)
-            console.log(orig)
-            console.log("SALT")
-            console.log(sc.salt())
-            // console.log(credentials)
-            const user = {
-                name: "Timo"
-            }
+            
+            
+                
+            
+            Promise.all([data]).then(async () => {
+                
+                console.log(await data)
+            })
+            
+            return data ? data : null
+            
+            
 
-            if (res.ok && user) {
-                return user
-            } else return null
+            
+            
+
+            
         }
       })
     ],
@@ -78,8 +105,7 @@ secret: "temp-secret",
         strategy: "jwt",
     },
     pages: {
-        signIn: "/auth/login",
-        newUser: '/onboarding'
+        signIn: "/auth/login"
     }
 }
 export default NextAuth(authOptions)
