@@ -4,13 +4,84 @@ import React from "react";
 // import classes from "./onboarding.module.css"
 import classes from "../auth/auth.module.css"
 import { useState, useRef } from "react";
+import axios from "axios";
+import { useSession } from "next-auth/react";
 
 export default function Onboarding() {
+    const { data: session } = useSession()
+    console.log(session)
     const [data, setData] = useState({})
     const [contentPosition, setContentPosition] = useState(0)
-    const [pageTwo, setPageTwo] = useState(<input type="text" placeholder="Join Code"/>)
     const firstName = useRef()
     const lastName = useRef()
+    const companyName = useRef()
+    const joinCode = useRef()
+    const [pageTwo, setPageTwo] = useState()
+
+    
+
+    const createCompany = async () => {
+        if (session?.user) {
+
+           const res = await axios.post("/api/onboarding", {
+               company: companyName.current.value,
+               user: data,
+               email: session.user.email
+
+           }) 
+            
+            // if (res.ok) {
+            //     window.location.replace("/dashboard")
+            // }
+            console.log(res)
+        }
+        
+    }
+    
+    const joinCompany = async () => {
+        
+        
+          const res = await axios.post("/api/onboarding", {
+                joinCode: joinCode.current.value,
+              user: data,
+                email: session.user.email
+            })
+
+            // if (res) {
+            //     window.location.replace("/dashboard")
+                
+            // }
+            console.log(res)  
+        
+            
+        
+    }
+
+
+
+    const switchAccountType = (accountType) => {
+        if (accountType == 2) {
+            setPageTwo(
+                <div className={classes.interface}>
+                    <input type="text" placeholder="Company Name" ref={companyName} />
+                    <button onClick={() => createCompany()} style={{backgroundColor: "#6BBF59"}}>Create</button>
+                </div>
+            )
+            document.querySelector(".line").style.transform = "translateX(100%)"
+            document.querySelector(".line").style.borderRadius = "0 5px 5px 0"
+        } else {
+            setPageTwo(
+                <div className={classes.interface}>
+                    <input type="text" placeholder="Join Code" ref={joinCode} />
+                    <button style={{backgroundColor: "#6BBF59"}} onClick={() => joinCompany()}>Join</button>
+                </div>
+            )
+            document.querySelector(".line").style.transform = "translateX(0%)"
+            document.querySelector(".line").style.borderRadius = "5px 0 0 5px"
+
+
+        }
+    }
 
     const nextPage = (page) => {
         setContentPosition(page)
@@ -20,18 +91,11 @@ export default function Onboarding() {
                 firstName: firstName.current.value,
                 lastName: lastName.current.value
             })
-        }
-    }
 
-    const switchAccountType = (accountType) => {
-        if (accountType == 2) {
-            setPageTwo(
-                <input type="text" placeholder="Company Name" />
-            )
-        } else {
-            setPageTwo(
-                <input type="text" placeholder="Join Code" />
-            )
+            setPageTwo(<div className={classes.interface}>
+                <input type="text" placeholder="Join Code" ref={joinCode}  onClick={() => joinCompany()}/>
+                <button style={{backgroundColor: "#6BBF59"}}>Join</button>
+            </div>)
         }
     }
 
@@ -54,10 +118,12 @@ export default function Onboarding() {
         <button onClick={() => nextPage(1)} style={{ backgroundColor: "#6BBF59", marginTop: 10 }}>Register</button>
         
     </div>, <div>
-        <div>
-            <div onClick={() => switchAccountType(1)}>Join</div>
-            <div onClick={() => switchAccountType(2)}>Create</div>
-            <div className={classes.line}>&nbsp;</div>
+        <div className={classes.switcher}>
+            <div>
+               <div onClick={() => switchAccountType(1)}>Join</div>
+                <div onClick={() => switchAccountType(2)}>Create</div> 
+            </div>
+            <div className="line">&nbsp;</div>
         </div>
 
         {pageTwo}

@@ -23,3 +23,10 @@ h1 {
   color: #2B2A2F;
 
 }
+
+.line {
+  width: 50% !important;
+  background-color: #6BBF59;
+  height: 5px;
+  border-radius: 5px 0 0 5px;
+}
