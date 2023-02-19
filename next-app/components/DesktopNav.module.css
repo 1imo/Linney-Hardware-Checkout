@@ -1,6 +1,6 @@
 .nav {
     width: calc(100vw / 9);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 40px);
     background: #FFFFFF;
     border: 1px solid #D8D7DB;
     border-radius: 20px;
@@ -22,8 +22,8 @@
 }
 
 .nav > img {
-    width: calc(100vw / 12);
-    height: calc(100vw/12);
+    width: calc(100vw / 18);
+    height: calc(100vw/ 18);
     object-fit:cover;
     border-radius: 2000px;
     margin-bottom: 20px;
@@ -56,7 +56,7 @@
 .navigation > div {
     row-gap: 40px;
     width: 100%;
-    padding-left: calc((100vw/9 - 100vw/12) / 2) ;
+    padding-left: calc((100vw/6 - 100vw/12) / 4) ;
 
 }
 

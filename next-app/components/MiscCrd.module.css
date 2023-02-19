@@ -1,0 +1,43 @@
+.crd {
+    border: #D8D7DB solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 50%;
+
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.title > h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.data {
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+}
+
+.data > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
