@@ -2,20 +2,21 @@
 import React from "react"
 
 import { useSession } from "next-auth/react"
+import DesktopNav from "@/components/DesktopNav"
 
 
 export default function Dashboard() {
 
-    const { data } = useSession()
-
-    if (data) {
-        if (!data.user.user?.company) {
-            window.location.replace("/onboarding")
+    const { data: session, status } = useSession({
+        required: true,
+        onUnauthenticated() {
+            window.location.replace("/")
+            
         }
-    } else {
-        window.location.replace("/")
-        
-    }
+    })
+
+    
+
 
 
    
@@ -24,6 +25,6 @@ export default function Dashboard() {
 
     
     return <div>
-        Dashboard
+        <DesktopNav />
     </div>
 }

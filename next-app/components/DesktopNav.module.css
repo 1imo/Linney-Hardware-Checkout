@@ -1,0 +1,78 @@
+.nav {
+    width: calc(100vw / 9);
+    height: calc(100vh - 80px);
+    background: #FFFFFF;
+    border: 1px solid #D8D7DB;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2B2A2F;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav > img {
+    width: calc(100vw / 12);
+    height: calc(100vw/12);
+    object-fit:cover;
+    border-radius: 2000px;
+    margin-bottom: 20px;
+
+}
+
+.quickInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    row-gap: 5px;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.navigation {
+    height: 100%;
+    width: 100%
+
+}
+
+.navigation,
+.navigation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation > div {
+    row-gap: 40px;
+    width: 100%;
+    padding-left: calc((100vw/9 - 100vw/12) / 2) ;
+
+}
+
+.navigation > div > a,
+.navigation > div > div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+
+.navigation > div > a > h2,
+.navigation > div > div > h2 {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    font-weight: 400;
+}

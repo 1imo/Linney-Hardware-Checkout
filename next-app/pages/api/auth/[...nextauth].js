@@ -105,7 +105,9 @@ secret: "temp-secret",
         strategy: "jwt",
     },
     pages: {
-        signIn: "/auth/login"
-    }
+        signIn: "/auth/login",
+        newUser: "/onboarding"
+    },
+    
 }
 export default NextAuth(authOptions)

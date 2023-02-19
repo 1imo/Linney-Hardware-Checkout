@@ -6,6 +6,7 @@ import classes from "../auth/auth.module.css"
 import { useState, useRef } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Onboarding() {
     const { data: session } = useSession()
@@ -17,10 +18,12 @@ export default function Onboarding() {
     const companyName = useRef()
     const joinCode = useRef()
     const [pageTwo, setPageTwo] = useState()
+    const router = useRouter()
 
     
 
     const createCompany = async () => {
+        console.log("CLICK NOW")
         if (session?.user) {
 
            const res = await axios.post("/api/onboarding", {
@@ -29,29 +32,37 @@ export default function Onboarding() {
                email: session.user.email
 
            }) 
+           console.log(res)
             
-            // if (res.ok) {
-            //     window.location.replace("/dashboard")
-            // }
-            console.log(res)
+            if (res.data == true) {
+                // window.location.replace("/dashboard")
+                router.push("/dashboard")
+                
+            }
+            
         }
         
     }
     
     const joinCompany = async () => {
+        console.log("CLICK NOW")
         
         
           const res = await axios.post("/api/onboarding", {
                 joinCode: joinCode.current.value,
               user: data,
                 email: session.user.email
-            })
+          })
+        
+          console.log(res)
 
-            // if (res) {
-            //     window.location.replace("/dashboard")
+            if (res.data == true) {
+                // window.location.replace("/dashboard")
+                router.push("/dashboard")
                 
-            // }
-            console.log(res)  
+                
+            }
+            
         
             
         
