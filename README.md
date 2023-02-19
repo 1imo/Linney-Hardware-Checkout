@@ -8,4 +8,9 @@ Therefore, I've had to scrap everything, and I didn't like my designs too so the
 
 I will be proceeding with Next, and Next Auth. It also will give good SEO; the majority will be SSR (that's why in my first attempt the majority of HTML elements were divs - SEO wasn't a thought; everything would have been behind a login page
 
-Instead of using a relational db, I've decided to continue using Firestore but with references to documents, not unlike the way relational dbs work. I feel that this is the more modern, and suitable way for this exact project - it will never need to accomodate 1000000 users.:wq 
+Instead of using a relational db, I've decided to continue using Firestore but with references to documents, not unlike the way relational dbs work. I feel that this is the more modern, and suitable way for this exact project - it will never need to accomodate 1000000 users.
+
+I wanted to have User data stored in sessions,
+however, I can never seem to get them right (it's why I didn't go with a robust library like PassportJs). Instead had to do a simple API call which ended up taking 20 minutes to work with some session data for some reason.
+
+ 
