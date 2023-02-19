@@ -13,4 +13,6 @@ Instead of using a relational db, I've decided to continue using Firestore but w
 I wanted to have User data stored in sessions,
 however, I can never seem to get them right (it's why I didn't go with a robust library like PassportJs). Instead had to do a simple API call which ended up taking 20 minutes to work with some session data for some reason.
 
-Rough User Dashboard hewed out - I hate this stage icl - it always looks so ugly and unsightly. Reminds me of the meme "we have __ at home," (in comparison to the design). Scroll bars need to be done, as does the data fetching and smaller screen responsiveness needs a lot of work
+Rough User Dashboard hewed out - I hate this stage icl - it always looks so ugly and unsightly. Reminds me of the meme "we have __ at home," (in comparison to the design). Scroll bars need to be done, as does the data fetching and smaller screen responsiveness needs a lot of work.
+
+Reverted back to design 2.0 - the shown design, but without the picture, glassmorphic elements. and a darker interface, which will load much faster (even optimising that huge image still left a slow page load, and assembly time). 

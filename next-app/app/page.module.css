@@ -1,5 +1,5 @@
 .page {
-    padding: 20px;
+    padding: 30px 20px 20px;
     box-sizing: border-box;
 }
 
@@ -10,9 +10,7 @@
     z-index: -2;
     width: calc(100vw - 20px);
     height: calc(100vh/3);
-    background-image: url("/background.jpg");
-    background-repeat: none;
-    background-size: cover;
+    background-color: #2B2A2F;
     border-radius: 20px;
 }
 
@@ -53,7 +51,7 @@
     padding: 0;
     margin: 0;
     line-height: 100%;
-    color: #2B2A2F;
+    color: #fff;
     font-size: 30px;
     font-weight: 500;
 }
@@ -64,9 +62,8 @@
     align-items: center;
     padding: 7px 20px;
     gap: 20px;
-    background: linear-gradient(107.65deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 50.8%, rgba(255, 255, 255, 0.6) 100%);
-    box-shadow: 10px 5px 20px -5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
+    background-color: #54525B;
+    color: #fff;
     
 
     border-radius: 10px;
@@ -82,13 +79,13 @@
     display: flex;
     align-items: center;
 
-    color: #2B2A2F;
+    color: #fff;
     
 }
 
 .dashBottom {
     display: flex;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     height: calc(100% - 100vh/3 - 40px);
     margin-top: 80px;
     margin-left: 40px;
@@ -100,6 +97,13 @@
 
 .dashBottom > div {
     width: 100%;
+}
+
+.dashBottomLeft > h2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
 }
 
 .dashBottomRight {
