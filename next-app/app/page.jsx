@@ -28,10 +28,10 @@ export default function Home() {
         </Link>
       
       <div className={classes.navRight}>
-          <div className={`${classes.navActions} ${classes.navActionsMob}`} style={{ color: "#6BBF59" }} onClick={() => signIn()}>
-          Sign In
-          <img src="arrow-up-right-green.svg" style={{paddingLeft:10}} />
-        </div>
+          <div className={classes.navActions} style={{ color: "#A2D729", cursor: "pointer" }} onClick={() => signIn()}>
+            Sign In
+            <img src="arrow-up-right.svg" style={{paddingLeft:10}} />
+          </div>
       </div>
     </div>
 
@@ -40,47 +40,39 @@ export default function Home() {
         Linney CMS
       </h1>
         <p>Discover a new way to organise your business with our revolutionary
-          content management system! Get the <span style={{ color: "#6BBF59", textDecoration: "underline", fontWeight: 500 }}>most</span> out of your data and streamline
+          content management system! Get the most out of your data and streamline
           operations for maximum efficiency.</p>
       
       <div className={classes.detailsActions}>
-        <button className={classes.getStarted}>Get Started</button>
-        <button><img src="./file-question.svg"/>How It Works</button>
+          <Link className={classes.getStarted} href={"/auth/register"}>Get Started</Link>
+          <Link href={"/documentation"}>Documentation</Link>
       </div>
     </div>
 
-    <section className={`${classes.hero} ${classes.heroMob}`} style={{zIndex: -2}}>
-      
-        <ChartCrd width={"100%"} height={"240px"} className={classes.chartCrdMob} />
-      <div style={{display: 'flex', columnGap: 20}} className={`${classes.cardBar} ${classes.cardBarMob}`}>
-        <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-        <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-        <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-      </div>
-    </section>
+    
   </main>
   } else {
     return (
-    <main>
+    <main className={classes.page}>
       <div className={classes.nav}>
        
-          <Link href="/" className={classes.navLeft}>
+          <Link href="/" className={classes.navLeft} style={{cursor: "pointer"}}>
             <img src="./fan.svg" style={{ paddingRight: 10 }} />
           Linney CMS
           </Link>
         
         <div className={classes.navRight}>
           <div>
-            <Link href="/docs">
+            <Link href="/docs" style={{cursor: "pointer"}}>
               Documentation
             </Link>
           </div>
-          <div onClick={() => window.location.replace("/auth/register")} style={{ color: "#6BBF59" }} className={classes.navActions}>
+          <Link href={"/auth/register"} style={{ color: "#A2D729", cursor: "pointer" }} className={classes.navActions}>
             Sign Up
-          </div>
-          <div className={classes.navActions} style={{ color: "#6BBF59" }} onClick={() => signIn()}>
+          </Link>
+          <div className={classes.navActions} style={{ color: "#A2D729", cursor: "pointer" }} onClick={() => signIn()}>
             Sign In
-            <img src="arrow-up-right-green.svg" style={{paddingLeft:10}} />
+            <img src="arrow-up-right.svg" style={{paddingLeft:10}} />
           </div>
         </div>
       </div>
@@ -89,29 +81,17 @@ export default function Home() {
         <h1>
           Linney CMS
         </h1>
-        <p>Try the new Business To End-User CMS
-          and experience all the amazing features
-          it has to offer! From intuitive content
-          creation tools to powerful analytics,
-          this system is designed to make managing your
-          business <span style={{ color: "#6BBF59", textDecoration: "underline", fontWeight: 500 }}>easier</span>  than ever. Get started today
-          and see how it can help you reach your goals faster.</p>
+        <p>Discover a new way to organise your business with our revolutionary
+          content management system! Get the most out of your data and streamline
+          operations for maximum efficiency.</p>
         
         <div className={classes.detailsActions}>
-          <button className={classes.getStarted}>Get Started</button>
-          <button><img src="./file-question.svg"/>How It Works</button>
+          <Link className={classes.getStarted} href={"/auth/register"}>Get Started</Link>
+          <Link href={"/documentation"}>Documentation</Link>
         </div>
       </div>
 
-      <section className={classes.hero}>
-        
-        <ChartCrd width={"calc(100vw/4)"} />
-        <div style={{display: 'flex', columnGap: 20}} className={classes.cardBar}>
-          <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-          <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-          <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
-        </div>
-      </section>
+      
     </main>
   )
   }

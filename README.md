@@ -15,4 +15,8 @@ however, I can never seem to get them right (it's why I didn't go with a robust 
 
 Rough User Dashboard hewed out - I hate this stage icl - it always looks so ugly and unsightly. Reminds me of the meme "we have __ at home," (in comparison to the design). Scroll bars need to be done, as does the data fetching and smaller screen responsiveness needs a lot of work.
 
-Reverted back to design 2.0 - the shown design, but without the picture, glassmorphic elements. and a darker interface, which will load much faster (even optimising that huge image still left a slow page load, and assembly time). 
+Reverted back to design 2.0 - the shown design, but without the picture, glassmorphic elements. and a darker interface, which will load much faster (even optimising that huge image still left a slow page load, and assembly time).
+
+I wasn't happy with the public-facing infrastructure: to say it was an after-thought was an understatement. Now it's been redesigned, and the code has been updated. Now it looks like it's been made in the last couple of years.
+
+Onboarding will be updated next, and the dash needs to be tweaked a little to conform to the overall theme.

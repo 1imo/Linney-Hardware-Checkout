@@ -36,14 +36,30 @@
 }
 
 .right {
-    padding: 10px 0;
-    width: calc(100vw / 12* 7);
-    height: 100%;
-    background-image: url("../../public/background.jpg");
-    /* background-origin: content-box; */
-    background-clip: content-box;
+    /* padding: 10px 0; */
+    margin: 10px 0;
+    width: calc(100vw / 12* 7  - 10px);
+    height: calc(100% - 20px);
     box-sizing: border-box;
+    background-color: #54525B;
     border-radius: 20px 0 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+}
+
+.right > div {
+    font-size: 360px;
+    color: #2B2A2F;
+    opacity: 0.2;
+    font-weight: 500;
+    white-space: nowrap;
+    transform: rotate(-45deg);
+    
 }
 
 .left {
@@ -65,6 +81,7 @@ justify-content: center;
     width: 100vw;
     display: flex;
     z-index: -2;
+    background-color: #2B2A2F;
     /* transform: translateY(-75px); */
 }
 
@@ -80,6 +97,7 @@ justify-content: center;
     line-height: 100%;
     font-size: 40px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .left > div {
@@ -98,9 +116,26 @@ justify-content: center;
     width: 100%;
     height: 40px;
     border-radius: 10px;
-    border: 2px solid #2B2A2F;
+    /* border: 2px solid #2B2A2F; */
+    border: none;
+    background: none;
+    color: #fff;
     background: none;
     font-size: 15px;;
+}
+
+.left > div > div > input::placeholder,
+.page > section > div > div > input::placeholder {
+    color: #fff;
+}
+
+.left > div > div,
+.page > section > div > div {
+    background: #54525B;
+    border-radius: 10px;
+    color: #fff;
+
+
 }
 
 .left > div > div > label {
@@ -119,6 +154,8 @@ justify-content: center;
     border-radius: 10px;
     color: #fff;
     width: 100%;
+    color: #2B2A2F;
+    background-color: #54525B;
 }
 
 .contentMob {

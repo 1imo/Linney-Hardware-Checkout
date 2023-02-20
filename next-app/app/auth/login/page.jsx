@@ -45,15 +45,15 @@ export default function Register() {
                     <div>
                         <h1>Welcome Back!</h1>
                         <div>
-                            <label>Email</label>
+                            
                             <input type="text" ref={email} placeholder="Enter Your Email" onChange={() => console.log(email.current.value)}/>
                         </div>
                         <div>
-                            <label>Password</label>
+                            
                             <input type="password" placeholder="----------" ref={pass} />
                         </div>
-                        <button onClick={() => enter()} style={{ backgroundColor: "#6BBF59", marginTop: 10 }}>Continue</button>
-                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15 }}>
+                        <button onClick={() => enter()} style={{ backgroundColor: "#A2D729", marginTop: 10 }}>Continue</button>
+                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15, background: "none", color: "#fff" }}>
                             Or
                         </div>
                         <button>Sign In With Google</button>
@@ -80,10 +80,10 @@ export default function Register() {
                             Documentation
                         </Link>
                     </div>
-                    <div onClick={() => window.location.replace("/auth/register")} style={{ color: "#2B2A2F" }} className={classes.navActions}>
+                    <Link href={"/auth/register"} style={{ color: "#A2D729", cursor: "pointer" }} className={classes.navActions}>
                         Sign Up
-                    </div>
-                    <div className={classes.navActions} style={{ color: "#2B2A2F" }} onClick={() => signIn()}>
+                    </Link>
+                    <div className={classes.navActions} style={{ color: "#A2D729" }} onClick={() => signIn()}>
                         Sign In
                         <img src="/arrow-up-right.svg" style={{ paddingLeft: 10 }} />
                     </div>
@@ -95,22 +95,26 @@ export default function Register() {
                     <div>
                         <h1>Welcome Back!</h1>
                         <div>
-                            <label>Email</label>
+                            
                             <input type="text" ref={email} placeholder="Enter Your Email" />
                         </div>
                         <div>
-                            <label>Password</label>
+                            
                             <input type="password" placeholder="----------" ref={pass} />
                         </div>
-                        <button onClick={() => enter()} style={{ backgroundColor: "#6BBF59", marginTop: 10 }}>Continue</button>
-                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15 }}>
+                        <button onClick={() => enter()} style={{ backgroundColor: "#A2D729", marginTop: 10 }}>Continue</button>
+                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15, background: "none", color: "#fff" }}>
                             Or
                         </div>
                         <button>Sign In With Google</button>
                         <button>Sign In With Github</button>
                     </div>
                 </section>
-                <section className={classes.right}></section>
+                <section className={classes.right}>
+                    <div>Hey You</div>
+                    <div>Hey You</div>
+                    <div>Hey You</div>
+                </section>
             
             </div>
         </main>
