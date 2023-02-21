@@ -7,7 +7,7 @@
     padding: 0 20px;
     background-color: #2B2A2F;
     border-radius: 10px;
-    box-shadow: -4px -2px 40px -10px rgba(84, 82, 91, 0.4), 20px 20px 40px -15px #000000;
+    box-shadow: -4px -2px 40px -10px rgba(84, 82, 91, 0.4), 10px 10px 40px -15px #000000;
 }
 
 .crd > h2 {
