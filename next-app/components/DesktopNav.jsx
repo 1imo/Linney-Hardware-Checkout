@@ -65,7 +65,7 @@ export default function DesktopNav(props) {
             <div >
                 <Link href={"/dashboard"}>
                     <img src="/home.svg" alt="Home" />
-                    <h2>Home</h2>
+                    <h2 style={{color: "#fff"}}>Home</h2>
                 </Link>
                 <Link href={"/browse"}>
                     <img src="/library.svg" alt="Browse" />

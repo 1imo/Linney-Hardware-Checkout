@@ -1,28 +1,42 @@
 .page {
-    padding: 30px 20px 20px;
     box-sizing: border-box;
 }
 
 .feature {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: -2;
-    width: calc(100vw - 20px);
-    height: calc(100vh/3);
-    background-color: #2B2A2F;
-    border-radius: 20px;
+    font-size: 100vh;
+    line-height: 100%;;
+    z-index: 0;
+    font-weight: 500;
+    color: #54525B;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    overflow-y: hidden;
+    
+   
 }
 
 .page > section {
+
     display: flex;
+    position: absolute;
+    z-index: 2;
+}
+
+.page > section > section {
+    padding: 40px calc(100vw / 24) 40px;
+    width: calc(100vw - (100vw / 9 + 100vw / 12))
+
 }
 
 .dashTop {
     display: flex;
-    width: calc(100vw - (100vw/9) - 100px);
+    width: 100%;
+    height: calc(100vh/3 - 20px);
     justify-content: space-between;
-    padding-left: 40px;
+    /* padding-left: 40px; */
     column-gap: 40px;
 }
 
@@ -32,7 +46,7 @@
     
     justify-content: space-between;
 
-    width: calc(100vw / 12* 5 - 40px)
+    width: calc(100vw / 3)
 
 
     
@@ -46,6 +60,11 @@
     height: 100%
 }
 
+.smlCrdHolder {
+    display: flex;
+    column-gap: 20px;
+}
+
 
 .dashTopRight > div > h2 {
     padding: 0;
@@ -56,14 +75,18 @@
     font-weight: 500;
 }
 
+.dashTopLeft {
+    width: calc(100% / 3 * 2)
+}
+
 .stateSelector {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 7px 20px;
     gap: 20px;
-    background-color: #54525B;
-    color: #fff;
+    background-color: #A2D729;
+    color: #2B2A2F;
     
 
     border-radius: 10px;
@@ -79,24 +102,35 @@
     display: flex;
     align-items: center;
 
-    color: #fff;
+    color: #2B2A2F
     
 }
 
 .dashBottom {
     display: flex;
-    width: calc(100% - 40px);
-    height: calc(100% - 100vh/3 - 40px);
-    margin-top: 80px;
-    margin-left: 40px;
+    width: 100%;
+    margin-top: 40px;
+    /* height: calc(100% - 100vh/3 - 40px); */
+    height: calc(100vw/ 3 * 2 + 20px);
     /* width: calc(100vw - (100vw/9) - 100px); */
     justify-content: space-between;
     box-sizing: border-box;
     /* padding: 80px 0 40px 40px; */
+    background: none;
 }
 
 .dashBottom > div {
-    width: 100%;
+    /* width: 100%; */
+    height: calc(100vh / 3 * 2 - 80px);
+    /* background-color: #2B2A2F; */
+    background: none;;
+    border-radius: 10px;
+
+}
+
+.dashBottomLeft {
+    width: calc(100% / 3 * 2 - 20px);
+
 }
 
 .dashBottomLeft > h2 {
@@ -107,7 +141,11 @@
 }
 
 .dashBottomRight {
+    width: calc(100% / 3 - 20px);
+    
+    
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    height: 100%;
 }

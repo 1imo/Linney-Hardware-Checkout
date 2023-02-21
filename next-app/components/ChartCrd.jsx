@@ -40,17 +40,17 @@ export default function ChartCrd(props) {
             {
                 label: "One",
                 borderRadius: 5,
-                data: [0.1, 0, 0.5, 1],
+                data: [0.1, 0, 0.5, 1, 2, 0.2],
                 barThickness: 40,
-                backgroundColor: "#6BBF59"
+                backgroundColor: "#A2D729"
 
             },
             {
                 label: "Two",
                 borderRadius: 5,
-                data: [0.4, 0.3, 0.1, 1],
+                data: [0.4, 0.3, 0.1, 1, 0, 0.3],
                 barThickness: 40,
-                backgroundColor: "#EF2917"
+                backgroundColor: "#DF2935"
             }
         ]
     }
@@ -62,7 +62,7 @@ export default function ChartCrd(props) {
                 position: "bottom",
                 align: "middle",
                 labels: {
-                    boxWidth: 40,
+                    boxWidth: 20,
                     usePointStyle: true,
                     pointStyle: "circle"
                 },
