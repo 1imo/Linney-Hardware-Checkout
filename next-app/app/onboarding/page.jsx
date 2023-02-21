@@ -73,18 +73,18 @@ export default function Onboarding() {
     const switchAccountType = (accountType) => {
         if (accountType == 2) {
             setPageTwo(
-                <div className={classes.interface}>
-                    <input type="text" placeholder="Company Name" ref={companyName} />
-                    <button onClick={() => createCompany()} style={{backgroundColor: "#6BBF59"}}>Create</button>
+                <div className={classes.interface} style={{background: "none"}}>
+                    <input type="text" placeholder="Company Name" ref={companyName} style={{background: "#54525B"}} />
+                    <button onClick={() => createCompany()} style={{backgroundColor: "#A2D729"}}>Create</button>
                 </div>
             )
             document.querySelector(".line").style.transform = "translateX(100%)"
             document.querySelector(".line").style.borderRadius = "0 5px 5px 0"
         } else {
             setPageTwo(
-                <div className={classes.interface}>
-                    <input type="text" placeholder="Join Code" ref={joinCode} />
-                    <button style={{backgroundColor: "#6BBF59"}} onClick={() => joinCompany()}>Join</button>
+                <div className={classes.interface} style={{background: "none"}}>
+                    <input type="text" placeholder="Join Code" ref={joinCode} style={{background: "#54525B"}} />
+                    <button style={{backgroundColor: "#A2D729"}} onClick={() => joinCompany()}>Join</button>
                 </div>
             )
             document.querySelector(".line").style.transform = "translateX(0%)"
@@ -103,16 +103,16 @@ export default function Onboarding() {
                 lastName: lastName.current.value
             })
 
-            setPageTwo(<div className={classes.interface}>
-                <input type="text" placeholder="Join Code" ref={joinCode}  onClick={() => joinCompany()}/>
-                <button style={{backgroundColor: "#6BBF59"}}>Join</button>
+            setPageTwo(<div className={classes.interface} style={{background: "none"}}>
+                <input type="text" placeholder="Join Code" ref={joinCode} onClick={() => joinCompany()} style={{background: "#54525B"}}/>
+                <button style={{backgroundColor: "#A2D729"}}>Join</button>
             </div>)
         }
     }
 
     const content = [<div>
         <h1>Lets Get To Know Each Other</h1>
-        <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+        <div style={{width: "100%", display: "flex", justifyContent: "center", background: "none"}}>
             <div className={classes.imageUpload}>
                 <img src="/image.svg" />
             </div>
@@ -126,11 +126,11 @@ export default function Onboarding() {
             <input type="text" placeholder="What's Your Last Name?" ref={lastName} />
         </div>
         
-        <button onClick={() => nextPage(1)} style={{ backgroundColor: "#6BBF59", marginTop: 10 }}>Register</button>
+        <button onClick={() => nextPage(1)} style={{ backgroundColor: "#A2D729", marginTop: 10 }}>Register</button>
         
-    </div>, <div>
-        <div className={classes.switcher}>
-            <div>
+    </div>, <div style={{background: "none"}}>
+        <div className={classes.switcher} style={{background: "none"}}>
+            <div style={{background: "none"}}>
                <div onClick={() => switchAccountType(1)}>Join</div>
                 <div onClick={() => switchAccountType(2)}>Create</div> 
             </div>
@@ -146,7 +146,7 @@ export default function Onboarding() {
         return <main className={classes.entire}>
             <div className={classes.nav}>
                 <div>
-                    <div>
+                    <div style={{color: "#fff", fontWeight: 500}}>
                      <img src="/fan.svg" style={{paddingRight: 10}}/>
                     Linney CMS    
                     </div>
@@ -166,7 +166,7 @@ export default function Onboarding() {
         return <main className={classes.entire}>
             <div className={classes.nav}>
                 <div>
-                    <div>
+                    <div style={{color: "#fff", fontWeight: 500}}>
                        <img src="/fan.svg" style={{paddingRight: 10}}/>
                     Linney CMS  
                     </div>
@@ -177,7 +177,11 @@ export default function Onboarding() {
                 <section className={classes.left}>
                     {content[contentPosition]}
                 </section>
-                <section className={classes.right}></section>
+                <section className={classes.right}>
+                    <div>How Are You</div>
+                    <div>How Are You</div>
+                    <div>How Are You</div>
+                </section>
             
             </div>
         </main>

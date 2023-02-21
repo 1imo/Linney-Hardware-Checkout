@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 20px max(20px, calc(100vw/12));
+    padding: 30px max(20px, calc(100vw/12));
     color: #2B2A2F;
     font-size: 15px;
     z-index: 10;
@@ -155,7 +155,7 @@ justify-content: center;
     color: #fff;
     width: 100%;
     color: #2B2A2F;
-    background-color: #54525B;
+    
 }
 
 .contentMob {
@@ -177,6 +177,7 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #54525B;
 }
 
 .switcher {
@@ -207,3 +208,6 @@ justify-content: center;
     margin-top: 40px;
 }
 
+/* .interface {
+   background-color: #54525B;
+} */

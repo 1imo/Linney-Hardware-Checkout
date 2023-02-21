@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 20px max(20px, calc(100vw/24));
+    padding: 30px max(20px, calc(100vw/12));
     color: #fff;
     font-size: 15px;
     z-index: 2;

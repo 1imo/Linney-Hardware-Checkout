@@ -1,21 +1,13 @@
 "use client"
 
-
-import styles from './page.module.css'
-import { useSession } from "next-auth/react"
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import Image from 'next/image'
-import Nav from '@/components/Nav'
-import ChartCrd from '@/components/ChartCrd'
+
 import classes from "./landingPage.module.css"
-import SquareCard from '@/components/SquareCrd'
-import { useEffect } from 'react'
+
 
 export default function Home() {
-  const { data } = useSession()
-
-  console.log(data)
 
   
   if (window.innerWidth < window.innerHeight) {

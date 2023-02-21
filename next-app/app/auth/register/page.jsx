@@ -17,7 +17,10 @@ export default function Register() {
             email: email.current.value,
             pass: pass.current.value
            }) 
-            console.log(res)
+            // console.log(res)
+            if (res) {
+                window.location.href = "/onboarding"
+            }
         }
         
     }
