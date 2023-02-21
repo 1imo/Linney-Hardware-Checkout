@@ -36,15 +36,21 @@ export default function Dashboard() {
         <section>
             <DesktopNav />
             <section>
-                <div>
-                    <div className={classes.dashTop}>
-                        <div className={classes.dashTopLeft}>
+                
+                    
+
+                    <div className={classes.dashLeft}>
+                        <div className={classes.dashLeftTop}>
                             <ChartCrd width={"100%"} height={"100%"} className={classes.chartCrd} />
-
                         </div>
+                        <div className={classes.dashLeftBottom}>
+                            <MessageCrd title="Latest Updates From Org Name" data={[{sender: "Sender", organisation: "company", content: "Greetings to all"}, {sender: "Sender", organisation: "company", content: "Greetings to all"}]} />
+                        </div>
+                    </div>
 
-                        <div className={classes.dashTopRight}>
-                            <div>
+                    <div className={classes.dashRight}>
+                        <div className={classes.dashRightTop}>
+                            <div className={classes.dashRightTopHeader}>
                                 <h2>Your Activity</h2>
                                 <div className={classes.stateSelector}>
                                     <button>Today</button>
@@ -58,18 +64,17 @@ export default function Dashboard() {
                                 <SquareCard data="returnSoon" number={13} percentage={"10.15%"} />
                             </div>
                         </div>
-                    </div>
 
-                    <div className={classes.dashBottom}>
-                        <div className={classes.dashBottomLeft}>
-                            <MessageCrd title="Latest Updates From Org Name" data={[{sender: "Sender", organisation: "company", content: "Greetings to all"}, {sender: "Sender", organisation: "company", content: "Greetings to all"}]} />
-                        </div>
-                        <div className={classes.dashBottomRight}>
+                        
+                        <div className={classes.dashRightBottom}>
                             <MiscCard title="Items To Return Soon" data={[{state: "Late", title: "laptop", location: "someplace", quantity: 1}, {state: "Late", title: "laptop", location: "someplace", quantity: 1}]} />
                             <MiscCard title="Request States" data={[{title: "laptop", quantity: 2, location: "someplace", state: "Pending"}, {title: "laptop", quantity: 2, location: "someplace", state: "Denied"}]} />
                         </div>
+                        
+
                     </div>
-                </div>
+
+            
             </section>
         </section>
     </main>

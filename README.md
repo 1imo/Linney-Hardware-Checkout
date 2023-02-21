@@ -23,4 +23,6 @@ Onboarding will be updated next, and the dash needs to be tweaked a little to co
 
 Redesigned the dashboard, but I'm not too happy with the mobile version, however, I need to workon the project so I will have to just use it. I'm happy with the visual heirarchy but I think I went overboard with shadows, especially considering that flat design is making a nice comeback.
 
-Dashboard pretty much remade but I'm having the stupidest error I've ever seen in CSS - aparently 2 thirds of the same length is equal to different values. I also made a change on the fly to accodate larger messages and reduce a large piece of uneeded whitespace. I can't wait to mess around with the Web Push API and the actual fun stuff instead of this ruddy CSS
+Dashboard pretty much remade but I'm having the stupidest error I've ever seen in CSS - aparently 2 thirds of the same length is equal to different values. I also made a change on the fly to accodate larger messages and reduce a large piece of uneeded whitespace. I can't wait to mess around with the Web Push API and the actual fun stuff instead of this ruddy CSS.
+
+Fixed it by redesigning the skeleton into vertical segments - I was still using horizontal segments from my previous design. Now it's very responsive except for the square cards and the desktop nav needs to be ported to smaller screen sizes. I wish CSS had an option to set width to height or otherwise - it'd make life so much easier icl.

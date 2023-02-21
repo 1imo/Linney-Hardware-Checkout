@@ -1,5 +1,5 @@
 .crd {
-    height: 100%;
+    height: calc(50% - 10px);
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
