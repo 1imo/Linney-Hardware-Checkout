@@ -13,20 +13,8 @@ export default function ProductPage({ params }) {
     <section>
         <DesktopNav />
             <section className={classes.productPage}>
-                <div className={classes.productPageImage}>
-                    <img src={"https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwZGFya3xlbnwwfHwwfHw%3D&w=1000&q=80"} />
-                    <div>
-                        <h1>MacBook Pro M1</h1>
-                        <div>
-                            <img src="/star-full.svg"/>
-                            <img src="/star-full.svg"/>
-                            <img src="/star-full.svg"/>
-                            <img src="/star-full.svg"/>
-                            <img src="/star-empty.svg"/>
-                        </div>
-                    </div>
-                </div>
-                <div className={classes.productPageText}>
+
+            <div className={classes.productPageText}>
                     <div>
                         <h2>Description</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed eleifend urna,
@@ -47,6 +35,20 @@ export default function ProductPage({ params }) {
                         </div>
                     </div>
                 </div>
+                <div className={classes.productPageImage}>
+                    <img src={"https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwZGFya3xlbnwwfHwwfHw%3D&w=1000&q=80"} />
+                    <div>
+                        <h1>MacBook Pro M1</h1>
+                        <div>
+                            <img src="/star-full.svg"/>
+                            <img src="/star-full.svg"/>
+                            <img src="/star-full.svg"/>
+                            <img src="/star-full.svg"/>
+                            <img src="/star-empty.svg"/>
+                        </div>
+                    </div>
+                </div>
+                
 
             </section>
         </section>
