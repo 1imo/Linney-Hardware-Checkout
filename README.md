@@ -41,4 +41,6 @@ Right, I'm kind of going back on myself but, I got some feedback from some desig
 
 Discover Page has been created - right now it's just the MVP, I will mess around with sizing later.I also found that the image doesn't cover the last 10px of height which is very annoying. The row gap doesn't look the same as the column gap.
 
-Product page is half up aswell. The skeleton and styles are always the most tedious parts but I'm almost at a point where I can start messing around with the fun things at last
+Product page is half up aswell. The skeleton and styles are always the most tedious parts but I'm almost at a point where I can start messing around with the fun things at last.
+
+First time I've not known how to do something in CSS in a long time. I don't even know how to formulate it as a question funnily enough. I want to make an image auto height depending on the space left in the container but it keeps auto sizing larger than the container. It's how I got this perfect page by reducing the image size depending on the description size or CTA buttons if the description is smaller than them
