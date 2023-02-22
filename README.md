@@ -31,4 +31,8 @@ Finished designing the product page - first time I'm actually content with my pr
 
 The Discover Page will just be a collection of the items available to rent - I'm not about to make a faux neural net (or an actual one for that matter) - the last time I made one I figured that the systemis only as good as the tags associated with each item. Anyway, this is why there is nothing special about the page.
 
-I also changed the size of the picture on the mobile page to be 50% of the entire container - last time it was just slapped on. I think it would have looked nicer at 2/3s butit might not show the CTA buttons in the first 100vh which means the user would have o scroll etc etc
+I also changed the size of the picture on the mobile page to be 50% of the entire container - last time it was just slapped on. I think it would have looked nicer at 2/3s butit might not show the CTA buttons in the first 100vh which means the user would have o scroll etc etc.
+
+Search bar with some interactivity created (usually I leave UX till last as I think it is the polishing streak and a nice way to end a project).
+
+I also found out today that my monitors and laptop's colour calibration is wayyyy off - I looked at one of the mobile designs using Figma's mirror functionality and the accent green is not as prominent as I could see it. I will still have to go with the flow - I am not redesigning a fourth time
