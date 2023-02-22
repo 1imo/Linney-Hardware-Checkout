@@ -20,7 +20,8 @@ export default function ProductPage({ params }) {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed eleifend urna,
                             in pulvinar justo. Nulla mollis, nibh sed maximus volutpat, metus magna pulvinar enim,
                             sit amet vehicula sapien dui sit amet ex. Nunc sollicitudin mi sit amet urna iaculis euismod.
-                            Sed vitae iaculis urna. Nulla a lobortis orci. Integer dignissim felis at orci tempor sagittis.</p>
+                            Sed vitae iaculis urna. Nulla a lobortis orci. Integer dignissim felis at orci tempor sagittis.
+                        </p>
                     </div>
                     <div>
                         <h2>Options</h2>

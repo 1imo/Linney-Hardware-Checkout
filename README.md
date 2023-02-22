@@ -45,4 +45,8 @@ Product page is half up aswell. The skeleton and styles are always the most tedi
 
 First time I've not known how to do something in CSS in a long time. I don't even know how to formulate it as a question funnily enough. I want to make an image auto height depending on the space left in the container but it keeps auto sizing larger than the container. It's how I got this perfect page by reducing the image size depending on the description size or CTA buttons if the description is smaller than them.
 
-I still remember the Flex-Box Frogs like it were yesterday. I was laughing at how there was the options for reversing the layout order. I also kept getting it wrong funnilly enough. I had to think how would the text container size be calculated first but displayed last? If it were shown in reverse. Now I have top vertical overfill from the image, but it's much closer to what it's supposed to be now
+I still remember the Flex-Box Frogs like it were yesterday. I was laughing at how there was the options for reversing the layout order. I also kept getting it wrong funnilly enough. I had to think how would the text container size be calculated first but displayed last? If it were shown in reverse. Now I have top vertical overfill from the image, but it's much closer to what it's supposed to be now.
+
+I did it, I was sat there just thinking, not touching it. How on earth can overflow:hidden just fix everything? Like it did way more than it should I cannot lie. I even doubled the placeholder description - works exactly as I imagined it to.
+
+Sometimes even CSS can surprise me and keep me on my toes.
