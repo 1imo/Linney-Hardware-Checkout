@@ -11,7 +11,7 @@ export default function Browse() {
 
     const content = [
         <div onMouseEnter={() => setSearchComponent(content[1])}><img src="/search-white.svg" /> Search</div>,
-        <input type="text" ref={searchTerm} onMouseLeave={() => searchTerm.current.value ? null : setSearchComponent(content[0])}/>
+        <input type="text" placeholder={"GGG"} ref={searchTerm} onMouseLeave={() => searchTerm.current.value ? null : setSearchComponent(content[0])}/>
     ]
 
     const [searchComponent, setSearchComponent] = useState(content[0])

@@ -35,4 +35,6 @@ I also changed the size of the picture on the mobile page to be 50% of the entir
 
 Search bar with some interactivity created (usually I leave UX till last as I think it is the polishing streak and a nice way to end a project).
 
-I also found out today that my monitors and laptop's colour calibration is wayyyy off - I looked at one of the mobile designs using Figma's mirror functionality and the accent green is not as prominent as I could see it. I will still have to go with the flow - I am not redesigning a fourth time
+I also found out today that my monitors and laptop's colour calibration is wayyyy off - I looked at one of the mobile designs using Figma's mirror functionality and the accent green is not as prominent as I could see it. I will still have to go with the flow - I am not redesigning a fourth time.
+
+Right, I'm kind of going back on myself but, I got some feedback from some designers on discord and they gave me some colours to try out. A friend of mine (afk) then rated the new colours and said "it looks official now." Looks like the green and red didn't go together. So they're getting cchanged to the suggested colours and the font inside the green needs to be bolder or larger to meet accessibillity standards. Design has been uploaded

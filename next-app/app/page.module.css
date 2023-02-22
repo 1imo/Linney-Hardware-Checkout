@@ -194,6 +194,10 @@
     width: 100%;
 }
 
+.search > input::placeholder {
+    color: #fff;
+}
+
 .search > input {
     background-color: #2B2A2F;
     border: none;
