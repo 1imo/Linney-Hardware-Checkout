@@ -35,7 +35,23 @@ export default function Browse() {
                 
                 <div className={classes.content}>
                     <h2>Discover</h2>
-                    <DiscoverItemCrd />
+                    <div>
+                        <DiscoverItemCrd />
+                        <DiscoverItemCrd />
+                        <DiscoverItemCrd />
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                        <DiscoverItemCrd /> 
+                    </div>
+                    
                 </div>
             </section>
         </section>

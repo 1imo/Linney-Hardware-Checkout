@@ -37,4 +37,8 @@ Search bar with some interactivity created (usually I leave UX till last as I th
 
 I also found out today that my monitors and laptop's colour calibration is wayyyy off - I looked at one of the mobile designs using Figma's mirror functionality and the accent green is not as prominent as I could see it. I will still have to go with the flow - I am not redesigning a fourth time.
 
-Right, I'm kind of going back on myself but, I got some feedback from some designers on discord and they gave me some colours to try out. A friend of mine (afk) then rated the new colours and said "it looks official now." Looks like the green and red didn't go together. So they're getting cchanged to the suggested colours and the font inside the green needs to be bolder or larger to meet accessibillity standards. Design has been uploaded
+Right, I'm kind of going back on myself but, I got some feedback from some designers on discord and they gave me some colours to try out. A friend of mine (afk) then rated the new colours and said "it looks official now." Looks like the green and red didn't go together. So they're getting cchanged to the suggested colours and the font inside the green needs to be bolder or larger to meet accessibillity standards. Design has been uploaded.
+
+Discover Page has been created - right now it's just the MVP, I will mess around with sizing later.I also found that the image doesn't cover the last 10px of height which is very annoying. The row gap doesn't look the same as the column gap.
+
+Product page is half up aswell. The skeleton and styles are always the most tedious parts but I'm almost at a point where I can start messing around with the fun things at last
