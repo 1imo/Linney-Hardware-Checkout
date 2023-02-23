@@ -19,9 +19,9 @@ export default function Browse() {
     <div className={classes.feature}>
         CMS
     </div>
-    <section>
+    <section style={window.innerHeight < 900 ? {flexDirection: "column"} : {flexDirection: "row"}}>
         <DesktopNav />
-            <section className={classes.discoverPage}>
+            <section className={classes.discoverPage} style={window.innerHeight < 900 ? { margin: "0 40px", width: "calc(100vw - 80px)", height: `calc(${window.innerHeight}px - 120px)` } : { margin: "40px calc(100vw / 24) 40px", height: "calc(100vh - 80px)" }}>
                 
                     <div className={classes.searchBar}>
                         <div className={classes.search}>
