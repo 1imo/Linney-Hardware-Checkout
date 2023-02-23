@@ -53,6 +53,6 @@ Sometimes even CSS can surprise me and keep me on my toes.
 
 Hit Designer's Block atempting to design the last 2 pages (Organisation Page and the Profile Page). Moved onto responsiveness in the mean time. The side menu looks atrocious on smaller screens, but Imma keep going with the flow for now. Simple page responsiveness is almost completed.
 
-I switched out the side nav bar for smaller screens liek laptops etc but the design still seems to small so I think i will have to allow for scrolling but that isn't what I wanted. It's really not looking good for me rn.
+I switched out the side nav bar for smaller screens liek laptops etc but the design still seems to small so I think i will have to allow for scrolling but that isn't what I wanted.
 
-You know what, I cn't manage everything. I'm a one man team, I just need to get this MVP done then I can get bogged down with things.
+Designs completed for the 2 pages - they aren't great. The best thing I've done today is changing the green accent button to a more aesthetically pleasing button with potential for animations.

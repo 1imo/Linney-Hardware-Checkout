@@ -33,13 +33,13 @@ export default function Dashboard() {
         <div className={classes.feature}>
             CMS
         </div>
-        <section>
+        <section style={window.innerHeight < 900 ? {flexDirection: "column"} : {flexDirection: "row"}}>
             <DesktopNav />
-            <section>
+            <section style={window.innerHeight < 900 ? { margin: "0 40px", width: "calc(100vw - 80px)", height: `calc(${window.innerHeight}px - 120px)`, columnGap: 20 } : { margin: "40px calc(100vw / 24) 40px", height: "calc(100vh - 80px)", columnGap: 40 }}>
                 
                     
 
-                    <div className={classes.dashLeft}>
+                <div className={classes.dashLeft} style={window.innerHeight < 900 ? {rowGap: 20} : {rowGap: 40}}>
                         <div className={classes.dashLeftTop}>
                             <ChartCrd width={"100%"} height={"100%"} className={classes.chartCrd} />
                         </div>
