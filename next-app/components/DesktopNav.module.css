@@ -31,7 +31,7 @@
     min-height: 100px;
     object-fit:cover;
     border-radius: 2000px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 
 }
 
@@ -81,4 +81,72 @@
     margin: 0;
     line-height: 100%;
     font-weight: 400;
+}
+
+.smallNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 40px 20px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.smallNav > div {
+    display: flex;
+    column-gap: 10px;
+}
+
+
+
+.smallNav > div > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 100%;
+    justify-content: space-around;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+}
+
+.smallNav > div > img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.smallNavName {
+    color: #fff;
+    font-weight: 500;
+}
+
+.smallNavOrg {
+    color: #54525B;
+    font-weight: 400;
+}
+
+.mobNavLogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 20px;
+    /* overflow: hidden; */
+}
+
+.mobNavLogo > img {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.mobNavLogo > div {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
 }

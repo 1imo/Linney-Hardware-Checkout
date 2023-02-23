@@ -5,16 +5,18 @@ import Image from "next/image"
 
 export default function ProductPage({ params }) {
     
-    const {id} = params
+    const { id } = params
+    console.log(window.innerHeight)
     return <main className={classes.page}>
     <div className={classes.feature}>
         CMS
     </div>
-    <section>
+    <section style={window.innerHeight < 900 ? {flexDirection: "column"} : {flexDirection: "row"}}>
         <DesktopNav />
-            <section className={classes.productPage} style={window.innerHeight < 900 ? { padding: "20px 100px" } : { padding: "40px calc(100vw / 24) 40px" }}>
+            <section className={classes.productPage} style={window.innerHeight < 900 ? { margin: "0 40px", width: "calc(100vw - 80px)", height: `calc(${window.innerHeight}px - 120px)` } : { margin: "40px calc(100vw / 24) 40px", height: "calc(100vh - 80px)" }}>
 
-            <div className={classes.productPageText}>
+           
+            <div className={classes.productPageText} style={window.innerHeight < 900 ? {columnGap: 20, padding: "20px 20px 0"} : {columnGap: 40, padding: "40px 20px 20px"}}>
                     <div>
                         <h2>Description</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed eleifend urna,

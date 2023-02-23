@@ -247,7 +247,7 @@
     /* row-gap: 10px; */
     justify-content: space-between;
     width: 100%;
-    height: calc(100vh - 80px);
+    
     background-color: #2B2A2F;
     box-sizing: border-box;
     padding: 20px !important;
@@ -301,8 +301,7 @@
 .productPageText {
     height: max-content;
     display: flex;
-    column-gap: 40px;
-    padding: 40px 20px 20px;
+    
     /* position: absolute;
     top: 100%;
     transform: translateY(-100%); */

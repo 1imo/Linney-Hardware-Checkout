@@ -51,4 +51,6 @@ I did it, I was sat there just thinking, not touching it. How on earth can overf
 
 Sometimes even CSS can surprise me and keep me on my toes.
 
-Hit Designer's Block atempting to design the last 2 pages (Organisation Page and the Profile Page). Moved onto responsiveness in the mean time. The side menu looks atrocious on smaller screens, but Imma keep going with the flow for now. Simple page responsiveness is almost completed.:wq
+Hit Designer's Block atempting to design the last 2 pages (Organisation Page and the Profile Page). Moved onto responsiveness in the mean time. The side menu looks atrocious on smaller screens, but Imma keep going with the flow for now. Simple page responsiveness is almost completed.
+
+I switched out the side nav bar for smaller screens liek laptops etc but the design still seems to small so I think i will have to allow for scrolling but that isn't what I wanted. It's really not looking good for me rn
