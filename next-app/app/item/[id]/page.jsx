@@ -12,7 +12,7 @@ export default function ProductPage({ params }) {
     </div>
     <section>
         <DesktopNav />
-            <section className={classes.productPage}>
+            <section className={classes.productPage} style={window.innerHeight < 900 ? { padding: "20px 100px" } : { padding: "40px calc(100vw / 24) 40px" }}>
 
             <div className={classes.productPageText}>
                     <div>

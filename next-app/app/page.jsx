@@ -20,7 +20,7 @@ export default function Home() {
         </Link>
       
       <div className={classes.navRight}>
-          <div className={classes.navActions} style={{ color: "#A2D729", cursor: "pointer" }} onClick={() => signIn()}>
+          <div className={classes.navActions} style={{ color: "#36B452", cursor: "pointer" }} onClick={() => signIn()}>
             Sign In
             <img src="arrow-up-right.svg" style={{paddingLeft:10}} />
           </div>
@@ -59,10 +59,10 @@ export default function Home() {
               Documentation
             </Link>
           </div>
-          <Link href={"/auth/register"} style={{ color: "#A2D729", cursor: "pointer" }} className={classes.navActions}>
+          <Link href={"/auth/register"} style={{ color: "#36B452", cursor: "pointer" }} className={classes.navActions}>
             Sign Up
           </Link>
-          <div className={classes.navActions} style={{ color: "#A2D729", cursor: "pointer" }} onClick={() => signIn()}>
+          <div className={classes.navActions} style={{ color: "#36B452", cursor: "pointer" }} onClick={() => signIn()}>
             Sign In
             <img src="arrow-up-right.svg" style={{paddingLeft:10}} />
           </div>

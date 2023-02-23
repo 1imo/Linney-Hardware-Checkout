@@ -52,8 +52,8 @@ export default function Register() {
                             
                             <input type="password" placeholder="----------" ref={pass} />
                         </div>
-                        <button onClick={() => enter()} style={{ backgroundColor: "#A2D729", marginTop: 10 }}>Continue</button>
-                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15, background: "none", color: "#fff" }}>
+                        <button onClick={() => enter()} style={{ backgroundColor: "#36B452", marginTop: 10 }}>Continue</button>
+                        <div style={{ textAlign: "center", color: "#36B452", fontSize: 15, background: "none", color: "#fff" }}>
                             Or
                         </div>
                         <button>Sign In With Google</button>
@@ -80,10 +80,10 @@ export default function Register() {
                             Documentation
                         </Link>
                     </div>
-                    <Link href={"/auth/register"} style={{ color: "#A2D729", cursor: "pointer" }} className={classes.navActions}>
+                    <Link href={"/auth/register"} style={{ color: "#36B452", cursor: "pointer" }} className={classes.navActions}>
                         Sign Up
                     </Link>
-                    <div className={classes.navActions} style={{ color: "#A2D729" }} onClick={() => signIn()}>
+                    <div className={classes.navActions} style={{ color: "#36B452" }} onClick={() => signIn()}>
                         Sign In
                         <img src="/arrow-up-right.svg" style={{ paddingLeft: 10 }} />
                     </div>
@@ -102,8 +102,8 @@ export default function Register() {
                             
                             <input type="password" placeholder="----------" ref={pass} />
                         </div>
-                        <button onClick={() => enter()} style={{ backgroundColor: "#A2D729", marginTop: 10 }}>Continue</button>
-                        <div style={{ textAlign: "center", color: "#ABA9B2", fontSize: 15, background: "none", color: "#fff" }}>
+                        <button onClick={() => enter()} style={{ backgroundColor: "#36B452", marginTop: 10 }}>Continue</button>
+                        <div style={{ textAlign: "center", color: "#36B452", fontSize: 15, background: "none", color: "#fff" }}>
                             Or
                         </div>
                         <button>Sign In With Google</button>

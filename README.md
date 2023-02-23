@@ -50,3 +50,5 @@ I still remember the Flex-Box Frogs like it were yesterday. I was laughing at ho
 I did it, I was sat there just thinking, not touching it. How on earth can overflow:hidden just fix everything? Like it did way more than it should I cannot lie. I even doubled the placeholder description - works exactly as I imagined it to.
 
 Sometimes even CSS can surprise me and keep me on my toes.
+
+Hit Designer's Block atempting to design the last 2 pages (Organisation Page and the Profile Page). Moved onto responsiveness in the mean time. The side menu looks atrocious on smaller screens, but Imma keep going with the flow for now. Simple page responsiveness is almost completed.:wq

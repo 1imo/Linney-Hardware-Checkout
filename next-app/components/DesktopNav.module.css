@@ -3,13 +3,14 @@
     top: 0;
     left: 0;
     width: calc(100vw / 9);
+    min-width: 200px;
     height: 100vh;
     background: #2B2A2F;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    padding: 40px 0;
+    /* padding: 40px 0; */
     box-sizing: border-box;
     box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.6);
 
@@ -18,7 +19,7 @@
 .logo {
     display: flex;
     column-gap: 10px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     font-weight: 500;
     font-size: 20px;
 }
@@ -26,6 +27,8 @@
 .nav > img {
     width: calc(100vw / 24);
     height: calc(100vw/ 24);
+    min-width: 100px;
+    min-height: 100px;
     object-fit:cover;
     border-radius: 2000px;
     margin-bottom: 20px;
@@ -38,7 +41,7 @@
     line-height: 100%;
     row-gap: 5px;
     align-items: center;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 
 }
 
@@ -56,7 +59,7 @@
 }
 
 .navigation > div {
-    row-gap: 40px;
+    /* row-gap: 40px; */
     width: 100%;
     padding-left: calc((100vw/6 - 100vw/12) / 4) ;
 

@@ -36,7 +36,7 @@ export default function Register() {
                 </Link>
      
                 <div className={classes.navRight}>
-                    <div className={classes.navActions} style={{ color: "#A2D729" }} onClick={() => signIn()}>
+                    <div className={classes.navActions} style={{ color: "#36B452" }} onClick={() => signIn()}>
                         Sign In
                         <img src="/arrow-up-right.svg" style={{ paddingLeft: 10 }} />
                     </div>
@@ -59,7 +59,7 @@ export default function Register() {
                             
                             <input type="password" placeholder="Confirm Your Password" ref={confirmPass} />
                         </div>
-                        <button className={classes.ctaButton} onClick={() => signUp()} style={{ backgroundColor: "#A2D729", marginTop: 10, fontWeight: 500 }}>Register</button>
+                        <button className={classes.ctaButton} onClick={() => signUp()} style={{ backgroundColor: "#36B452", marginTop: 10, fontWeight: 500 }}>Register</button>
                         <div style={{ textAlign: "center", color: "#fff", fontSize: 15, background: "none" }}>
                             Or
                         </div>
@@ -87,10 +87,10 @@ export default function Register() {
                             Documentation
                         </Link>
                     </div>
-                    <Link href={"/auth/register"} style={{ color: "#A2D729", cursor: "pointer" }} className={classes.navActions}>
+                    <Link href={"/auth/register"} style={{ color: "#36B452", cursor: "pointer" }} className={classes.navActions}>
                         Sign Up
                     </Link>
-                    <div className={classes.navActions} style={{ color: "#A2D729" }} onClick={() => signIn()}>
+                    <div className={classes.navActions} style={{ color: "#36B452" }} onClick={() => signIn()}>
                         Sign In
                         <img src="/arrow-up-right.svg" style={{ paddingLeft: 10 }} />
                     </div>
@@ -113,7 +113,7 @@ export default function Register() {
                            
                             <input type="password" placeholder="Confirm Your Password" ref={confirmPass} />
                         </div>
-                        <button className={classes.ctaButton} onClick={() => signUp()} style={{ backgroundColor: "#A2D729", marginTop: 10, fontWeight: 500 }}>Register</button>
+                        <button className={classes.ctaButton} onClick={() => signUp()} style={{ backgroundColor: "#36B452", marginTop: 10, fontWeight: 500 }}>Register</button>
                         <div style={{ textAlign: "center", color: "#fff", fontSize: 15, background: "none" }}>
                             Or
                         </div>

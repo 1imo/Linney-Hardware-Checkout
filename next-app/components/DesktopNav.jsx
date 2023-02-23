@@ -47,22 +47,22 @@ export default function DesktopNav(props) {
 
     
 
-    return <div className={classes.nav}>
-        <div className={classes.logo}>
+    return <div className={classes.nav} style={ window.innerHeight < 900 ? {padding: "20px 0"} : {padding: "40px 0"}}>
+        <div className={classes.logo} style={window.innerHeight < 900 ? {marginBottom: 20} : {marginBottom: 40}}>
             <img src="/fan.svg" />
             <div>Linney CMS</div>
         </div>
 
-        <img src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg" />
+        <img src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg" style={window.innerHeight < 900 ? {marginBottom: 10} : {marginBottom: 20}}/>
 
-        <div className={classes.quickInfo}>
+        <div className={classes.quickInfo} style={window.innerHeight < 900 ? {marginBottom: 20} : {marginBottom: 40}}>
             <div style={{marginBottom: 0, color: "#ABA9B2", fontWeight: 500, fontSize: 10}}>Welcome Back</div>
             <div style={{fontSize: 20}}>{name}</div>
             <div style={{fontSize: 10}}>Organisation Name</div>
         </div>
 
-        <div className={classes.navigation}>
-            <div >
+        <div className={classes.navigation} >
+            <div style={window.innerHeight < 900 ? {rowGap: 30} : {rowGap: 40}}>
                 <Link href={"/dashboard"}>
                     <img src="/home.svg" alt="Home" />
                     <h2 style={{color: "#fff"}}>Home</h2>
@@ -70,10 +70,6 @@ export default function DesktopNav(props) {
                 <Link href={"/browse"}>
                     <img src="/library.svg" alt="Browse" />
                     <h2>Browse</h2>
-                </Link>
-                <Link href={"/search"}>
-                    <img src="/search.svg" alt="Search" />
-                    <h2>Search</h2>
                 </Link>
                 <Link href={"/documentation"}>
                     <img src="/message-square.svg" alt="Support" />
@@ -89,7 +85,7 @@ export default function DesktopNav(props) {
                 </Link>
             </div>
 
-            <div style={{rowGap: 20}}>
+            <div style={window.innerHeight < 900 ? {rowGap: 15} : {rowGap: 20}}>
                 <Link href={"/settings"}>
                     <img src="/settings.svg" alt="Settings" />
                     <h2>Settings</h2>

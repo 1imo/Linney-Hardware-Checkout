@@ -28,8 +28,8 @@
 }
 
 .page > section > section {
-    padding: 40px calc(100vw / 24) 40px;
-    width: calc(100vw - (100vw / 9 + 100vw / 12));
+    /* padding: ; */
+    /* width: calc(100vw - (100vw / 9 + 100vw / 12)); */
     display: flex;
     column-gap: 40px;
 
@@ -108,7 +108,7 @@
     align-items: center;
     padding: 7px 20px;
     gap: 20px;
-    background-color: #A2D729;
+    background-color: #36B452;
     color: #2B2A2F;
     
 
@@ -166,7 +166,7 @@
 
 .filter {
     width: calc(100% / 3 - 10px);
-    background-color:#A2D729;
+    background-color:#36B452;
     
 
 
@@ -302,7 +302,7 @@
     height: max-content;
     display: flex;
     column-gap: 40px;
-    padding: 40px 20px;
+    padding: 40px 20px 20px;
     /* position: absolute;
     top: 100%;
     transform: translateY(-100%); */
@@ -346,6 +346,15 @@
     width: 100%;
     column-gap: 20px;
     justify-content: space-between;
+}
+
+.productPageCTA > div > select {
+    width: calc(100% / 3 - 10px);
+    background-color: #54525B;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .productPageCTA > div > button {
