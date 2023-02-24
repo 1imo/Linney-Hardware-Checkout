@@ -56,3 +56,5 @@ Hit Designer's Block atempting to design the last 2 pages (Organisation Page and
 I switched out the side nav bar for smaller screens liek laptops etc but the design still seems to small so I think i will have to allow for scrolling but that isn't what I wanted.
 
 Designs completed for the 2 pages - they aren't great. The best thing I've done today is changing the green accent button to a more aesthetically pleasing button with potential for animations.
+
+Been a slow couple of days - design for creating item and updating item has been created and work has been started on them. The last few designs are likely to be scrapped sooner or later.
