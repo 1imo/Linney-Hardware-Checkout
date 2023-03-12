@@ -1,0 +1,23 @@
+body {
+    background-color: #f7f7f7;
+
+}
+
+.page {
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 40px;
+}
+
+@media (min-width: 700px) {
+    .page{
+        padding: 40px calc(100vw / 6);
+
+    }
+}

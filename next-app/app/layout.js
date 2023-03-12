@@ -1,9 +1,20 @@
 "use client"
 import './globals.css'
 import { SessionProvider } from 'next-auth/react'
+import { signOut } from 'next-auth/react'
 
 
 export default function RootLayout({ children, session }) {
+
+  if (document) {
+    document.addEventListener("keydown", (e) => {
+    if (e.key == "s") {
+      signOut()
+    }
+  })
+  }
+
+  
 
   
   return (

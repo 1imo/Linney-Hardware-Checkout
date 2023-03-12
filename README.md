@@ -58,3 +58,5 @@ I switched out the side nav bar for smaller screens liek laptops etc but the des
 Designs completed for the 2 pages - they aren't great. The best thing I've done today is changing the green accent button to a more aesthetically pleasing button with potential for animations.
 
 Been a slow couple of days - design for creating item and updating item has been created and work has been started on them. The last few designs are likely to be scrapped sooner or later.
+
+Lost all motivation, looked at my designs yesterday and thought to myself how chavvy the looked. Leaned into a less-professional theme (idea not theme, that already made it unprofessional) of mini-games and minimalist graphic design. As a bonus it will be easy to make responsive

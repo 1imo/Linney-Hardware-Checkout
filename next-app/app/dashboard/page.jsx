@@ -35,7 +35,7 @@ export default function Dashboard() {
         </div>
         <section style={window.innerHeight < 900 ? {flexDirection: "column"} : {flexDirection: "row"}}>
             <DesktopNav />
-            <section style={window.innerHeight < 900 ? { margin: "0 40px", width: "calc(100vw - 80px)", height: `calc(${window.innerHeight}px - 120px)`, columnGap: 20 } : { margin: "40px calc(100vw / 24) 40px", height: "calc(100vh - 80px)", columnGap: 40, width: "100%" }}>
+            <section style={window.innerHeight < 900 ? { margin: "0 40px", width: "calc(100vw - 80px)", height: `calc(${window.innerHeight}px - 120px)`, columnGap: 20 } : { margin: "40px calc(100vw / 24) 40px", height: "calc(100vh - 80px)", columnGap: 40 }}>
                 
                     
 

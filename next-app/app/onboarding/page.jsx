@@ -24,6 +24,7 @@ export default function Onboarding() {
 
     const createCompany = async () => {
         console.log("CLICK NOW")
+        console.log(session)
         if (session?.user) {
 
            const res = await axios.post("/api/onboarding", {

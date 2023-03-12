@@ -109,7 +109,6 @@ justify-content: center;
 }
 
 .left > div > div > input,
-.left > div > input,
 .page > section > div > div > input {
     box-sizing: border-box;
     padding: 0 10px;
@@ -157,31 +156,6 @@ justify-content: center;
     width: 100%;
     color: #2B2A2F;
     
-}
-
-.textArea {
-    width: 100%;
-    height: 120px;
-    box-sizing: border-box;
-}
-
-.textArea > textarea {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background: none;
-    outline: none;
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-}
-
-.textArea > textarea::placeholder {
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
 }
 
 .contentMob {

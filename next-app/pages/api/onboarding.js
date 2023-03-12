@@ -43,6 +43,12 @@ export default function handler(req, res) {
                         
                     
                 })
+
+                // db.collection("users").doc(userId).update({
+                //     orgName: arr[0].company
+                // })
+
+                
             } else {
                 res.send(false)
             }
@@ -80,8 +86,11 @@ export default function handler(req, res) {
 
                     db.collection("organisations").where("joinCode", "==", code.join("")).get().then(query => {
                         let id = ""
+                        let orgData = ""
                         query.docs.map(item => {
                             id = item.id
+                            orgData = item.data()
+
                         })
 
                         db.collection("users").where("email", "==", req.body.email).get().then(query => {
@@ -90,7 +99,11 @@ export default function handler(req, res) {
                                 db.collection("organisations/" + id + "/admins").add({
                                         user: path
                                         
-                                    })
+                                })
+                                
+                                // db.collection("users").doc(item.id).update({
+                                //     orgName: orgData.company
+                                // })
 
                             })
                         })
