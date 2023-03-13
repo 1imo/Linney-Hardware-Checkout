@@ -7,27 +7,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return <main>
-    <section>
+    <div>
+      <div>Logo</div>
       <div>
-        <div>timCo</div>
-        <div>
-          <div>Sign Up</div>
-          <div>Sign In</div>
-        </div>
+        <div>Sign Up</div>
+        Sign In
       </div>
+    </div>
 
-      <div>
-        <iframe title="Discobolus Low Poly Stylized"
-          frameborder="0" allowfullscreen mozallowfullscreen="true"
-          webkitallowfullscreen="true" allow="autoplay; fullscreen; 
-          xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport
-          execution-while-not-rendered web-share
-          src="https://sketchfab.com/models/0fbcb0b00e5946d3a9a57169d34030de/embed">
-        </iframe>
-        </div>
-          
-
-    </section>
-    <Footer />
+    <div>
+      <h1>The <span><span>All</span>-<span>In</span>-<span>One</span></span> Tool</h1>
+      <h2>A Content Management System From timCo</h2>
+    </div>
+    
   </main>
 }

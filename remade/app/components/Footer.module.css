@@ -1,0 +1,64 @@
+.footer {
+    position: relative;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* transform: translateY(-25%); */
+    padding: 40px calc(100vw / 12);
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #000;
+
+}
+
+.content > div,
+.content > div > div  {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.header {
+    font-size: 30px !important;
+    font-weight: 600;
+}
+
+
+
+.rightContent > div {
+    text-align: right;
+}
+
+
+.content > div > a {
+    color: #000;
+}
+
+.finalTouch {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 20px !important;
+        font-weight: 600;
+    }
+}

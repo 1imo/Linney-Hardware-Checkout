@@ -1,10 +1,11 @@
 import Link from "next/link"
+import classes from "./Footer.module.css"
 
 export default function Footer() {
-    return <section>
-        <div>
-           <div>
-            <div>Content Management System</div>
+    return <section className={classes.footer}>
+        <div className={classes.content}>
+           <div className={classes.rightContent}>
+                <div className={classes.header}>Content Management System</div>
                 <div>
                    <div>By timCo</div>
                    <div>timHoy05@gmail.com</div>
@@ -18,7 +19,7 @@ export default function Footer() {
             </div> 
         </div>
 
-        <div>
+        <div className={classes.finalTouch}>
             All Rights Reserved timCoⓒ
         </div>
         

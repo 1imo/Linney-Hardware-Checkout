@@ -1,0 +1,86 @@
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    top: 0%;
+    left: 0%;
+}
+
+.page {
+    position: relative;
+    box-sizing: border-box;
+}
+.form {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw/3);
+
+    row-gap: 20px;
+    z-index: 4;
+    color: #fff;
+
+
+}
+
+.form > h1 {
+    color: #fff;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.form > div > input,
+.form > div > button {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    /* border: 2px solid #fff; */
+    border: none;
+    background: #191919;
+
+
+}
+
+.form > div > input {
+    padding: 0 10px;
+}
+
+.form > div > input::placeholder {
+    color: #fff;
+}
+
+
+.nav > button {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.gravity {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: calc(100vw - 20px) !important;
+    height: calc(100vh);
+    box-sizing: border-box !important;
+    z-index: 2;
+    overflow: hidden;
+    outline: none;
+    border-width: 0px;
+}
+
+.gravity > canvas {
+    border: none
+}
